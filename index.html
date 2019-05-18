@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Visualization Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="Resources/assets/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-primary">
+      <a class="navbar-brand" href="/Users/annieylai/Documents/GT_DSA_Bootcamp/Homework_9_HTML_CSS_Due_5.12.19/11-Web/Instructions/index.html">Lattitude</a>
+    </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item active">
+          <a class="nav-link" href="/Users/annieylai/Documents/GT_DSA_Bootcamp/Homework_9_HTML_CSS_Due_5.12.19/11-Web/Instructions/data.html">Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Users/annieylai/Documents/GT_DSA_Bootcamp/Homework_9_HTML_CSS_Due_5.12.19/11-Web/Instructions/comparison.html">Comparison</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="visualizations/temp.html">Max Temperature</a>
+            <a class="dropdown-item" href="visualizations/humidity.html">Humidity</a>
+            <a class="dropdown-item" href="visualizations/cloud.html">Cloudiness</a>
+            <a class="dropdown-item" href="visualizations/wind.html">Wind Speed</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="comparison.html">Comparison</a>
+            <a class="dropdown-item" href="data.html">Data</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  
+
+<div class="container">
+  <h3 class="text-center">Summary: Lattitude vs. X</h3>
+    <div class="row">
+        <div class="col-md-8">
+          <div class="thumbnail">
+            <img src="Resources/assets/images/Latitude_vs_Temperature_Plot.png" alt="..." class="img-thumbnail">
+          </div>
+          <div class="caption">
+              <h3>Summary: Lattitude vs. X</h3>
+              <p>The purpose of this project was to analyze weather changes in relation to distance from the equator.  For the method of the project, data from the OpenWeatherMap API was pulled to generate a random dataset on 627 cities.</p>
+              <p[>After obtaining the dataset, Matplotlib was used to plot various aspects of the weather versus lattitude.  Weather conditions examined included: maximum temperature, cloudiness, wind speed, and humidity.  This site provides the source data and visualizations created as part of the analysis, as well as descriptions and conclusions of any trends.</p>
+              <p>Key Points:  
+                  <ul>As expected, the weather becomes significantly warmer as one approaches the equator (0 degress latitude). More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of year than the northern hemisphere. This may be due to the tilt of the earth.</ul>
+                  <ul>There is no strong relationship between latitude and cloudiness. However, it is interesting to see that a strong band of cities sits at 0, 80, and 100% cloudiness.</ul>
+                  <ul>There is no strong relationship between latitude and wind speed. However, in northern hemispheres there is a flurry of cities with over 20 mph of wind.</ul>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+          <div class="caption">
+              <h3>Visualizations</h3>
+
+              <div class="img-thumbnail">
+                    <div class="col-xs-6 col-sm-3 col-md-6">
+                        <figure>
+                            <a href="visualizations/temp.html">
+                                <img id="landing-viz" src="Resources/assets/images/Latitude_vs_Temperature_Plot.png" alt="City Latitude vs. Max Temperature">
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 col-md-6">
+                        <figure>
+                            <a href="visualizations/humidity.html">
+                                <img id="landing-viz" src="Resources/assets/images/City_Latitude_vs_Humidity_Plot.png" alt="City Latitude vs. Humidity">
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 col-md-6">
+                        <figure>
+                            <a href="visualizations/cloud.html">
+                                <img id="landing-viz" src="Resources/assets/images/City_Latitude_vs_Cloudiness_Plot.png" alt="City Latitude vs. Cloudiness">
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 col-md-6">
+                        <figure>
+                            <a href="visualizations/wind.html">
+                                <img id="landing-viz" src="Resources/assets/images/City_Latitude_vs_Wind_Speed_Plot.png" alt="City Latitude vs. Wind Speed">
+                            </a>
+                        </figure>
+                    </div>
+
+                </div>
+
+              
+          </div>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+
+</html>
